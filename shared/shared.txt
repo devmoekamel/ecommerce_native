@@ -1,1 +1,9 @@
 shared function and style and html will be here
+
+ background color : 
+ #d7d7d7
+
+
+ login and register => pic 
+ width: 600px;
+height: 500px;
