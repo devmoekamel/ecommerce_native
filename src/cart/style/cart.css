@@ -1,8 +1,12 @@
 .cart-item{
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid black;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
-
+.item-amout{
+    display: flex;
+}
