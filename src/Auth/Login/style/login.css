@@ -2,7 +2,7 @@
     --padding-x :12px;
     --padding-y :8px;
     --primary-color :#6c63ff;
-
+    --background-color: #cccc;
 }
 *{
     margin: 0;
@@ -54,7 +54,7 @@ form input{
     border-radius: 10px;
     font-size: medium;
     border: none;
-    background-color: #cccc;
+    background-color: var(--background-color);
 }
 form button{
 
