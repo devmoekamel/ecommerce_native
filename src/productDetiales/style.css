@@ -12,7 +12,7 @@
 }
 
 #image-container img {
-    max-width: 100%; /* Ensures the image fits within the container */
+    max-width: 500px; /* Ensures the image fits within the container */
     height: auto; /* Maintains the aspect ratio */
 }
 
@@ -27,6 +27,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #btn:hover {
