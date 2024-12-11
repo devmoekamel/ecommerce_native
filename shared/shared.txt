@@ -7,3 +7,8 @@ shared function and style and html will be here
  login and register => pic 
  width: 600px;
 height: 500px;
+
+
+-----------
+api - 
+https://fakestoreapi.in/api/products
