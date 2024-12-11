@@ -33,3 +33,11 @@
 #btn:hover {
     background-color: #5b54d1;
 }
+
+#text-contianer h2 {
+  color: var(--color-gray);
+}
+
+#text-contianer h2 span{
+    color: #524bcc;
+  }
