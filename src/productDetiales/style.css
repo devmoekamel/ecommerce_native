@@ -1,52 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
+#main-container {
     display: flex;
-     justify-content: center;
-     align-items: center;
-
-     
-}
-#main-container
-{
-    margin-top: 150px;
-    display: flex;
-   /* grid-template-columns:repeat(2,minmax(0,1fr)) ;*/
-    /* column-gap: 3em; */
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    gap: 10em; /* Add spacing between the image and text */
+    margin: 20px;
 }
 
-#img{
-    width: 350px;
-    height: 350px;
+#image-container {
+    flex: 1; /* Makes the image container flexible */
+    text-align: center; /* Centers the image inside the container */
 }
 
-#text-contianer
-{
-    padding: 2em;
+#image-container img {
+    max-width: 100%; /* Ensures the image fits within the container */
+    height: auto; /* Maintains the aspect ratio */
 }
 
-#btn{
-    margin: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 18px;
+#text-contianer {
+    flex: 1; /* Makes the text container flexible */
+}
+
+#btn {
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: #fff;
     border: none;
-    transition: ease-in-out 1s;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#btn:hover{
-    color: black;
-    background-color: white;
+#btn:hover {
+    background-color: #5b54d1;
 }
-
-
