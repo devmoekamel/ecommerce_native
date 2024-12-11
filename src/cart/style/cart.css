@@ -2,11 +2,17 @@
 
     display: flex;
     justify-content: center;
-    margin: 50px;
+    margin-top: 50px;
 }
+hr{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: var( --color-gray);
 
+}
 .cart-alaa{
-
     display: grid;
     grid-template-columns: 2fr repeat(3,minmax(0,1fr)) ;
     margin-left: 25px;
