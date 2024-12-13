@@ -35,8 +35,8 @@ hr{
     padding: 12px;
     border-radius: 25px;
     text-align: center;
-
     box-shadow: 0px 10px 25px #00000029;
+    margin-bottom: 8px;
     /* margin-right: 25px; */
 }
 .item-details{
@@ -47,9 +47,14 @@ hr{
     /* text-align: center; */
     /* justify-content: center; */
 }
+
 .item-details h3{
     color: var(--primary-color);
 }
+.item-price{
+    color: var(--color-gray);
+}
+
 .item-amout{
     display: flex;
     column-gap: 25px;
@@ -57,11 +62,43 @@ hr{
     align-items: center;
     justify-content: center;
 }
-
-
-
+.item-amout{
+    color: var(--primary-color);
+}
+.item-total-price h2{
+color: var(--color-gray);
+}
 img{
     width: 100px;
     height: 100px;
+    border-radius: 25px;
+}
+.price-container{
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+}
+.price-details{
+    display: flex;
+    flex-direction: column;
+    
+}
+.totalprice-content span{
+    color: var(--primary-color);
+}
 
+
+.checkout-container button{
+    padding: 1em 5em;
+    color: white;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1em;
+    transition: 1s  ease-in-out;
+}
+
+.checkout-container button:hover{
+
+    background-color: black ;
 }

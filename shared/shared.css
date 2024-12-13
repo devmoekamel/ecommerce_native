@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
 :root{
     --padding-x :12px;
     --padding-y :8px;

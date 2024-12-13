@@ -1,3 +1,75 @@
+header{
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.logo-part{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+.nav-list ul{
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+    list-style: none;
+
+}
+.cart-section{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.cart-section a{
+   text-decoration: none;
+   color: var(--primary-color);
+   font-weight: bold;
+    font-size: 20px;
+}
+.cart-section span{
+   color: var(--color-gray);
+}
+.nav-list ul a{
+    text-decoration: none;
+    color: var(--color-gray);
+    font-weight: bold;
+}
+
+
+
+.user-section{
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+}
+.user-section h3{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    /* color: var(--color-gray); */
+    font-weight: bold;
+}
+.user-section button{
+   font-weight: bold;
+   padding: 9px 17px;
+   border: none;
+   background-color: var(--primary-color);
+   color: white;
+   border-radius: 1em;
+   transition: 1s ease-in-out;
+}
+
+.user-section button:hover{
+   
+    background-color: red;
+ }
+
+
+
 #footer-contianer{
     display: flex;
     justify-content: space-around;
