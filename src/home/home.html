@@ -55,7 +55,27 @@
     </header>
     <!-- waiting for rest items -->
     <br /><br /><br /><br /><br /><br /><br /><br />
+    <img  name="slide" alt="slider">
+    
     <!-- waiting for rest items -->
+
+    <div class="card">
+      <div class="card-image">
+          <img id="img" src="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg" alt="">
+      </div>
+      <div class="card-content">
+          <h3>Sony WH-1000XM3 Bluetooth </h3>
+          <p>Audio</p>
+          <div class="card-footer">
+              <span>$109.95</span>
+              <button class="cart-button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+  
+
 
     <footer>
       <div id="footer-contianer">
@@ -88,5 +108,30 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var i = 0;
+      var imges = [];
+      imges[0]="resources/ban1.jpg";
+      imges[1]="resources/ban2.jpg";
+      imges[2]='resources/ban3.jpg';
+
+
+      function changeImg()
+      {
+        document.slide.src=imges[i];
+        if(i<imges.length-1)
+        {
+            i++;
+        }
+        else{
+          i=0;
+        }
+
+        setTimeout("changeImg()",2000);
+      }
+
+      window.onload=changeImg;
+    </script>
   </body>
 </html>
