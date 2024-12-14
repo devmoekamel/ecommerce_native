@@ -125,7 +125,10 @@ img{
 
 /* General styling for the card */
 
-
+#slider{
+    width: 100%;
+    height: 500px;
+}
 .card {
     margin-bottom: 100px;
     width: 300px;
