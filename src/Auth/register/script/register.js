@@ -13,7 +13,6 @@ let user = {
 };
 
 let users = [];
-
 username.addEventListener("input", (event) => {
   let value = event.target.value;
   if (value != null) {
@@ -36,7 +35,6 @@ email.addEventListener("input", (event) => {
   } else {
     // error span for email
     emailSpan.style.display = "block";
-
     console.log("email error");
   }
 });
@@ -65,3 +63,22 @@ registerForm.addEventListener("submit", (event) => {
     localStorage.setItem("users", JSON.stringify(users));
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

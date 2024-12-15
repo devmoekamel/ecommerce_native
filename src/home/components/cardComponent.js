@@ -19,3 +19,11 @@ export let cardComponent = (product) => {
         </div>
       </div>`;
 };
+
+
+
+
+ 
+
+
+

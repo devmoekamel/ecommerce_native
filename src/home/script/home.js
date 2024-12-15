@@ -16,3 +16,8 @@ getAllProducts().then((products) =>
 );
 
 getAllCategories();
+
+
+
+
+
