@@ -81,3 +81,14 @@ img{
     height: 650px;
     object-fit: contain;
 }
+
+
+form span{
+    color: red;
+    text-transform: capitalize;
+    display: none;
+}
+form h4 a{
+color: var(--primary-color);
+text-decoration: none;
+}

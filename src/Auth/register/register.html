@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../shared/shared.css">
-    <link rel="stylesheet" href="style/register.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../shared/shared.css" />
+    <link rel="stylesheet" href="style/register.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="main-container">
-        <div class="register-container">
-            <div class="register-img-section">
-                <img src="assets/register.png" alt="" />
-              </div>
-          <div class="register-form-section">
-            <form action="">
-                <label for="name"> Name</label>
-                <input type="text" id="name" name="name" />
-              <label for="email"> Email Address</label>
-              <input type="email" id="email" name="email" />
-              <label for="password"> Password</label>
-              <input type="password" id="password" name="password" />
-              <label for="password">Confirm Password</label>
-              <input type="password" id="password" name="password" />
-
-              <button>Register</button>
-            </form>
-          </div>
-         
+      <div class="register-container">
+        <div class="register-img-section">
+          <img src="assets/register.png" alt="" />
         </div>
-      </section>
-</body>
+        <div class="register-form-section">
+          <form id="registerForm">
+            <label for="name"> Name</label>
+            <input type="text" id="username" name="name" />
+            <span id="usernameSpan">username is required</span>
+            <label for="email"> Email Address</label>
+            <input type="email" id="email" name="email" />
+            <span id="emailSpan">Email Field is not valid</span>
+            <label for="password"> Password</label>
+            <input type="password" id="password" name="password" />
+            <span id="passwordSpan">password is required</span>
+            <h4>
+              Already has an account?<a href="../Login/login.html"> Login</a>
+            </h4>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="script/register.js"></script>
+  </body>
 </html>
