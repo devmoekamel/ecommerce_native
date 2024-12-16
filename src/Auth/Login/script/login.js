@@ -4,22 +4,20 @@ let usernameSpan = document.getElementById("usernameSpan");
 let passwordSpan = document.getElementById("passwordSpan");
 let loginform = document.getElementById("login-form");
 
-
 let flag = false;
 
-export let userData = {
-    username:"",
-    password:""
-}
+let userData = {
+  username: "",
+  password: "",
+};
 
 function getAllUsers() {
   return JSON.parse(localStorage.getItem("users"));
 }
 
-email.addEventListener("input", (event) => {
-
+username.addEventListener("input", (event) => {
   let value = event.target.value;
-  if (value!=null) {
+  if (value != null) {
     usernameSpan.style.display = "none";
     userData.username = value;
   } else {
@@ -31,11 +29,10 @@ email.addEventListener("input", (event) => {
 password.addEventListener("input", (event) => {
   let value = event.target.value;
 
-  if (value!=null) {
+  if (value != null) {
     passwordSpan.style.display = "none";
-    userData.password=value;
-} 
-else {
+    userData.password = value;
+  } else {
     // error span for password
     passwordSpan.style.display = "block";
     console.log("error password");
@@ -44,22 +41,15 @@ else {
 
 loginform.addEventListener("submit", (event) => {
   event.preventDefault();
-  if(userData.username&&userData.password){
-
-    getAllUsers().forEach(user => {
-        if(user.username==userData.username&&userData.password==user.password)
-        {
-            location.href="../../home/home.html";
-        }
-
+  if (userData.username && userData.password) {
+    getAllUsers().forEach((user) => {
+      if (
+        user.username == userData.username &&
+        userData.password == user.password
+      ) {
+        console.log("nnjnjnjn");
+        location.href = "/src/home/home.html";
+      }
     });
-    
   }
- 
 });
-
-
-
-
-
-
