@@ -4,9 +4,13 @@ import { price_compoment } from "../components/total_price_component.js";
 
 document.body.innerHTML += head_table();
 
+if (!localStorage.getItem("cart")) {
+  localStorage.setItem("cart", JSON.stringify([]));
+}
 export let getCartItems = () => {
   return JSON.parse(localStorage.getItem("cart"));
 };
+console.log(getCartItems());
 
 let cartItems = getCartItems();
 cartItems.forEach((product) => {
