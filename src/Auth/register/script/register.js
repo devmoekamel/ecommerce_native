@@ -12,6 +12,9 @@ let user = {
   password: "",
 };
 
+if (!localStorage.getItem("users")) {
+  localStorage.setItem("users", JSON.stringify([]));
+}
 username.addEventListener("input", (event) => {
   let value = event.target.value;
   if (value != null) {
