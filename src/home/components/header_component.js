@@ -41,8 +41,12 @@ export let header_component = () => {
         </a>
       </div>
       <div class="user-section">
-        <h3>${getUserCookie()}</h3>
-        <button>Logout</button>
+        <h3>${getUserCookie() ? getUserCookie() : ""}</h3>
+       ${
+         getUserCookie()
+           ? "<button class='logout'>Logout</button>"
+           : "<button class='login'>LogIn</button>"
+       } 
       </div>
     </header>`;
 };

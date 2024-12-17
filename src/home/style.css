@@ -59,7 +59,7 @@ img{
 }
 .user-section button{
    font-weight: bold;
-   padding: 9px 17px;
+   padding: 9px 2rem;
    border: none;
    background-color: var(--primary-color);
    color: white;
@@ -67,12 +67,15 @@ img{
    transition: 1s ease-in-out;
 }
 
-.user-section button:hover{
+.user-section .login:hover{
+   
+    background-color: green;
+ }
+
+ .user-section .logout:hover{
    
     background-color: red;
  }
-
-
 
 #footer-contianer{
     display: flex;
@@ -162,6 +165,9 @@ img{
 .card-content {
     padding: 15px;
     text-align: left;
+}
+.card-content h3{
+    cursor: pointer;
 }
 .card-Category{
     display: flex;

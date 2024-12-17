@@ -5,10 +5,12 @@ export let cardComponent = (product) => {
             id="img"
             src=${product.image}
             alt=""
+            width="400"
+          
           />
         </div>
         <div class="card-content">
-          <h3>${product.title}</h3>
+          <h3 onclick="goto(${product.id})">${product.title}</h3>
           <p>${product.category}</p>
           <div class="card-footer">
             <span>${product.price} $</span>
@@ -19,3 +21,5 @@ export let cardComponent = (product) => {
         </div>
       </div>`;
 };
+
+// /productdetials/
