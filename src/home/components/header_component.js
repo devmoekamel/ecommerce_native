@@ -3,6 +3,8 @@ import { getUserCookie } from "../../../shared/functions.js";
 export let header_component = () => {
   console.log("header_component called");
 
+  let user = getUserCookie();
+
   return `
      <header>
       <div class="logo-part">
@@ -34,12 +36,7 @@ export let header_component = () => {
           <li><a href="#">Products</a></li>
         </ul>
       </div>
-      <div class="cart-section">
-        <a href="#">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span>(0)</span>
-        </a>
-      </div>
+      ${user?"":""}
       <div class="user-section">
         <h3>${getUserCookie() ? getUserCookie() : ""}</h3>
        ${

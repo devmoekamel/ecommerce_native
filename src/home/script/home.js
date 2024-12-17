@@ -36,6 +36,7 @@ window.addToCart = (event) => {
     if (cartItems[i].title == product.title) {
       flag = true;
       productId = i;
+      break;
     }
   }
 
@@ -44,7 +45,7 @@ window.addToCart = (event) => {
     cartItems.push(product);
     localStorage.setItem("cart", JSON.stringify(cartItems));
   } else {
-    cartItems[productId] = cartItems[productId].count += 1;
+    cartItems[productId].count++;
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }
 

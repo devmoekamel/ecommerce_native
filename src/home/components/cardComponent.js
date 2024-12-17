@@ -6,7 +6,6 @@ export let cardComponent = (product) => {
             src=${product.image}
             alt=""
             width="400"
-          
           />
         </div>
         <div class="card-content">
