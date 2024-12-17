@@ -39,7 +39,7 @@ export let header_component = () => {
       ${
         user
           ? `<div class="cart-section">
-        <a href="#">
+        <a href="/src/cart/cart.html">
           <i class="fa-solid fa-cart-shopping"></i>
           <span>(0)</span>
         </a>
@@ -50,7 +50,7 @@ export let header_component = () => {
         <h3>${user ? user.username : ""}</h3>
        ${
          user
-           ? "<button class='logout'>Logout</button>"
+           ? "<button class='logout'  >Logout</button>"
            : "<button class='login' onclick='goToLoginPage()'>LogIn</button>"
        } 
       </div>
