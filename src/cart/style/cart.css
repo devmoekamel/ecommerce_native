@@ -16,7 +16,7 @@ hr{
 }
 .cart-alaa{
     display: grid;
-    grid-template-columns: 2fr repeat(3,minmax(0,1fr)) ;
+    grid-template-columns: repeat(4,minmax(0,1fr)) ;
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
@@ -28,16 +28,16 @@ hr{
     /* width: 100%; */
     /* border: 1px solid black; */
     display: grid;
-    grid-template-columns: 2fr repeat(3,minmax(0,1fr)) ;
+    grid-template-columns: repeat(4,minmax(0,1fr)) ;
     align-items: center;
     margin-left: 25px;
     margin-right: 25px;
     padding: 12px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0px 10px 25px #00000029;
+    /* box-shadow: 0px 10px 25px #00000029; */
     margin-bottom: 8px;
-    border-bottom: 2px dashed red;
+    /* border-bottom: 2px dashed red; */
     /* margin-right: 25px; */
 }
 .item-details{

@@ -11,19 +11,11 @@ export let cardComponent = (product) => {
           <h3>${product.title}</h3>
           <p>${product.category}</p>
           <div class="card-footer">
-            <span>${product.price}</span>
-            <button class="cart-button">
+            <span>${product.price} $</span>
+            <button class="cart-button" id="${product.id}" onclick="addToCart(this)">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
           </div>
         </div>
       </div>`;
 };
-
-
-
-
- 
-
-
-

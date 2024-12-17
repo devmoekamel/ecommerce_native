@@ -17,7 +17,7 @@ function getAllUsers() {
 
 username.addEventListener("input", (event) => {
   let value = event.target.value;
-  if (value != null) {
+  if (value) {
     usernameSpan.style.display = "none";
     userData.username = value;
   } else {
@@ -29,7 +29,7 @@ username.addEventListener("input", (event) => {
 password.addEventListener("input", (event) => {
   let value = event.target.value;
 
-  if (value != null) {
+  if (value) {
     passwordSpan.style.display = "none";
     userData.password = value;
   } else {
@@ -47,9 +47,14 @@ loginform.addEventListener("submit", (event) => {
         user.username == userData.username &&
         userData.password == user.password
       ) {
+        addUserCookie(user.username);
         console.log("nnjnjnjn");
+
         location.href = "/src/home/home.html";
       }
     });
   }
 });
+
+// export { userData };
+
