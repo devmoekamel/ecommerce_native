@@ -1,7 +1,9 @@
 import { getUser } from "../../../shared/functions.js";
+import { getCartItems } from "../../cart/script/cart.js";
 
 export let header_component = () => {
   console.log("header_component called");
+  let CartLength = getCartItems().length;
 
   let user = getUser();
 
@@ -41,7 +43,7 @@ export let header_component = () => {
           ? `<div class="cart-section">
         <a href="/src/cart/cart.html">
           <i class="fa-solid fa-cart-shopping"></i>
-          <span>(0)</span>
+          <span>(${CartLength ?? 0})</span>
         </a>
       </div>`
           : ""

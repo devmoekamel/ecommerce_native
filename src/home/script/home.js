@@ -44,9 +44,11 @@ window.addToCart = (event) => {
     product.count = 1;
     cartItems.push(product);
     localStorage.setItem("cart", JSON.stringify(cartItems));
+    location.reload();
   } else {
     cartItems[productId].count++;
     localStorage.setItem("cart", JSON.stringify(cartItems));
+    location.reload();
   }
 
   // console.log(allProducts[event.id - 1]);
@@ -61,14 +63,16 @@ window.getCart = () => {
   }
 };
 
-window.getCart();
+// window.getCart();.
 document.body.insertAdjacentHTML("beforeend", footer_component());
 window.goto = (productid) => {
   window.location.href = `/src/productDetiales/index.html?id=${productid}`;
 };
 
-window.goToLoginPage = ()=>{
-  location.href =  "/src/Auth/Login/login.html";
-}
+window.goToLoginPage = () => {
+  location.href = "/src/Auth/Login/login.html";
+};
 
-
+// let CartLength = ()=>{
+//   return getCartItems
+// }

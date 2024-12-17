@@ -11,8 +11,15 @@ let userData = {
   password: "",
 };
 
-function getUser() {
-  return JSON.parse(localStorage.getItem("user"));
+function CheckUser() {
+  let users = JSON.parse(localStorage.getItem("users"));
+  let flag = false;
+  users.forEach((user) => {
+    if (user.username == userData.username) {
+      flag = true;
+    }
+  });
+  return flag;
 }
 
 username.addEventListener("input", (event) => {
@@ -42,16 +49,12 @@ password.addEventListener("input", (event) => {
 loginform.addEventListener("submit", (event) => {
   event.preventDefault();
   if (userData.username && userData.password) {
-    let user = getUser();
+    let user = CheckUser();
     console.log(user);
-    if (
-      user.username == userData.username &&
-      userData.password == user.password
-    ) {
-      // addUserCookie(user.username);
-      console.log("nnjnjnjn");
 
+    if (user) {
       location.href = "/src/home/home.html";
+      localStorage.setItem("user", JSON.stringify(userData));
     }
   }
 });

@@ -12,7 +12,6 @@ let user = {
   password: "",
 };
 
-// let users = [];
 username.addEventListener("input", (event) => {
   let value = event.target.value;
   if (value != null) {
@@ -56,14 +55,13 @@ password.addEventListener("input", (event) => {
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (user.email != null && user.password != null && user.username != null) {
-    // users.push(user);
+    let users = JSON.parse(localStorage.getItem("users"));
+    users.push(user);
     registerForm.reset();
-    // user = {};
+    user = {};
     console.log("user add");
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("users", JSON.stringify(users));
   }
 });
-
-
 
 // let getUser

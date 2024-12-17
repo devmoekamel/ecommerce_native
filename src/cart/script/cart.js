@@ -4,19 +4,15 @@ import { price_compoment } from "../components/total_price_component.js";
 
 document.body.innerHTML += head_table();
 
-let getCartItems = async () => {
-  let items = await JSON.parse(localStorage.getItem("cart"));
-  if (items) {
-    // console.log(items);
-    return items;
-  }
-  return;
+export let getCartItems = () => {
+  return JSON.parse(localStorage.getItem("cart"));
 };
-getCartItems().then((products) => {
-  products.forEach((product) => {
-    document.body.innerHTML += cart_item(product);
-  });
+
+let cartItems = getCartItems();
+cartItems.forEach((product) => {
+  document.body.innerHTML += cart_item(product);
 });
+document.body.innerHTML += price_compoment();
 
 // document.body.innerHTML += "";
 // console.log(getCartItems());
@@ -25,5 +21,3 @@ getCartItems().then((products) => {
 // CartItems.forEach((product) => {
 //   document.body.innerHTML += cart_item(product);
 // });
-
-document.body.innerHTML += price_compoment();
