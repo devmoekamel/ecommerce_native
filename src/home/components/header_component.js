@@ -1,9 +1,9 @@
-import { getUserCookie } from "../../../shared/functions.js";
+import { getUser } from "../../../shared/functions.js";
 
 export let header_component = () => {
   console.log("header_component called");
 
-  let user = getUserCookie();
+  let user = getUser();
 
   return `
      <header>
@@ -47,9 +47,9 @@ export let header_component = () => {
           : ""
       }
       <div class="user-section">
-        <h3>${user ? user : ""}</h3>
+        <h3>${user ? user.username : ""}</h3>
        ${
-         getUserCookie()
+         user
            ? "<button class='logout'>Logout</button>"
            : "<button class='login' onclick='goToLoginPage()'>LogIn</button>"
        } 

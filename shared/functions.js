@@ -4,15 +4,11 @@ export let addUserCookie = (value) => {
   document.cookie = `user=${value}; expires=${today}; path=/`;
 };
 
-export let getUserCookie = () => {
-  let cookies = document.cookie.split("; ");
+export let getUser = () => {
+  let username = localStorage.getItem("user");
 
-  for (let cookie of cookies) {
-    let cookiePart = cookie.split("=");
-    if (cookiePart[0] === "user") {
-      return cookiePart[1];
-    }
+  if (username) {
+    return JSON.parse(username);
   }
-
   return null;
 };
