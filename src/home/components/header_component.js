@@ -36,13 +36,22 @@ export let header_component = () => {
           <li><a href="#">Products</a></li>
         </ul>
       </div>
-      ${user?"":""}
+      ${
+        user
+          ? `<div class="cart-section">
+        <a href="#">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>(0)</span>
+        </a>
+      </div>`
+          : ""
+      }
       <div class="user-section">
-        <h3>${getUserCookie() ? getUserCookie() : ""}</h3>
+        <h3>${user ? user : ""}</h3>
        ${
          getUserCookie()
            ? "<button class='logout'>Logout</button>"
-           : "<button class='login'>LogIn</button>"
+           : "<button class='login' onclick='goToLoginPage()'>LogIn</button>"
        } 
       </div>
     </header>`;

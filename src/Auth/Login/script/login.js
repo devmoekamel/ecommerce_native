@@ -11,8 +11,8 @@ let userData = {
   password: "",
 };
 
-function getAllUsers() {
-  return JSON.parse(localStorage.getItem("users"));
+function getUser() {
+  return JSON.parse(localStorage.getItem("user"));
 }
 
 username.addEventListener("input", (event) => {
@@ -42,19 +42,20 @@ password.addEventListener("input", (event) => {
 loginform.addEventListener("submit", (event) => {
   event.preventDefault();
   if (userData.username && userData.password) {
-    getAllUsers().forEach((user) => {
-      if (
-        user.username == userData.username &&
-        userData.password == user.password
-      ) {
-        addUserCookie(user.username);
-        console.log("nnjnjnjn");
+    let user = getUser();
+    console.log(user);
+    if (
+      user.username == userData.username &&
+      userData.password == user.password
+    ) {
+      // addUserCookie(user.username);
+      console.log("nnjnjnjn");
 
-        location.href = "/src/home/home.html";
-      }
-    });
+      location.href = "/src/home/home.html";
+    }
   }
 });
 
 // export { userData };
 
+// console.log(location.href);

@@ -66,3 +66,9 @@ document.body.insertAdjacentHTML("beforeend", footer_component());
 window.goto = (productid) => {
   window.location.href = `/src/productDetiales/index.html?id=${productid}`;
 };
+
+window.goToLoginPage = ()=>{
+  location.href =  "/src/Auth/Login/login.html";
+}
+
+

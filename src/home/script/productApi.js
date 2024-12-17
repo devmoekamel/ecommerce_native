@@ -24,3 +24,6 @@ let getAllCategories = async () => {
 };
 
 export { getAllProducts, getAllCategories };
+
+
+
