@@ -26,4 +26,5 @@ export let totalPriceCalc = () => {
     totalPrice += Number(product.price) * Number(product.count);
   });
   return totalPrice;
+  // 
 };
