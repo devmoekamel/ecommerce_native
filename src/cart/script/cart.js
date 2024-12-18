@@ -29,12 +29,20 @@ window.deleteItem = (ProductId) => {
 
 
 
+window.addItemAmount = (ProductId) => {
+  let cartItems = getCartItems();
+  cartItems[ProductId].count++;
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+  location.reload();
+};
+window.RemoveItemAmount = (ProductId) => {
+  let cartItems = getCartItems();
+  if (cartItems[ProductId].count > 1) {
+    cartItems[ProductId].count--;
+  } else {
+    cartItems.splice(ProductId, 1);
+  }
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+  location.reload();
+};
 
-
-// document.body.innerHTML += "";
-// console.log(getCartItems());
-// let CartItems = getCartItems();
-// console.log(typeof CartItems);
-// CartItems.forEach((product) => {
-//   document.body.innerHTML += cart_item(product);
-// });
