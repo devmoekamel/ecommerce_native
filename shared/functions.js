@@ -12,3 +12,18 @@ export let getUser = () => {
   }
   return null;
 };
+export let getCartItems = () => {
+  if (!localStorage.getItem("cart")) {
+    return [];
+  }
+  return JSON.parse(localStorage.getItem("cart"));
+};
+// console.log(getCartItems());
+export let totalPriceCalc = () => {
+  let cartItems = getCartItems();
+  let totalPrice = 0;
+  cartItems.forEach((product) => {
+    totalPrice += Number(product.price) * Number(product.count);
+  });
+  return totalPrice;
+};

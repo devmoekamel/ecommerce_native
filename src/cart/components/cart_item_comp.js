@@ -1,4 +1,4 @@
-export let cart_item = (product) => {
+export let cart_item = (product, index) => {
   return ` <div class="cart-item">
       <div class="item-details">
         <img
@@ -19,6 +19,9 @@ export let cart_item = (product) => {
       </div>
       <div class="item-total-price">
         <h2>${Number(product.price) * Number(product.count)}$</h2>
+      </div>
+       <div class="delete-item" onclick="deleteItem(${index})">
+        <h3><i class="fa-solid fa-trash"></i></h3>
       </div>
     </div>
     <hr>`;

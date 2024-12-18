@@ -1,5 +1,4 @@
-import { getUser } from "../../../shared/functions.js";
-import { getCartItems } from "../../cart/script/cart.js";
+import { getCartItems, getUser } from "../functions.js";
 
 export let header_component = () => {
   console.log("header_component called");
@@ -10,6 +9,7 @@ export let header_component = () => {
   return `
      <header>
       <div class="logo-part">
+       <a href="/src/home/home.html">
         <svg
           id="logo-35"
           width="50"
@@ -29,7 +29,8 @@ export let header_component = () => {
             fill="#312ECB"
           ></path>
         </svg>
-        <h2>Ecomma</h2>
+         <h2>Ecomma</h2>
+       </a>
       </div>
       <div class="nav-list">
         <ul>

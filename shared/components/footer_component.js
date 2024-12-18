@@ -1,8 +1,8 @@
 export let footer_component = () => {
-    console.log("footer called");
+  console.log("footer called");
   return ` <footer>
       <div id="footer-contianer">
-        <a href="home.html">
+        <a href="/src/home/home.html">
           <svg
             id="logo-35"
             width="50"

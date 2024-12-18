@@ -1,10 +1,10 @@
-header{
+/* header{
     padding: 2em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* background-color: black; */
-}
+/* } */
 
 .logo-part{
     display: flex;
@@ -88,7 +88,7 @@ img{
     display: flex;
     justify-content: space-around;
     gap: 1em;
-}
+} 
 /* 
 #product-detials
 {
@@ -130,7 +130,11 @@ img{
 
 
 
-
+.slider-container
+{
+    display: flex;
+    justify-content: center;
+}
 
 #slider{
     width: 100%;

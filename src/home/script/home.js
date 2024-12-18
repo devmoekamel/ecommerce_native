@@ -1,7 +1,7 @@
 // import { userData } from "../../Auth/Login/script/login.js";
 import { cardComponent } from "../components/cardComponent.js";
-import { footer_component } from "../components/footer_component.js";
-import { header_component } from "../components/header_component.js";
+import { footer_component } from "/shared/components/footer_component.js";
+import { header_component } from "/shared/components/header_component.js";
 import { allProducts, getAllProducts } from "./productApi.js";
 
 document.body.insertAdjacentHTML("afterbegin", header_component());
@@ -11,6 +11,7 @@ let productList = document.getElementById("productList");
 let i = 0;
 let imges = ["assets/ban1.jpg", "assets/ban2.jpg", "assets/ban3.jpg"];
 let sliderElement = document.getElementById("slider");
+console.log(sliderElement);
 window.onload = setInterval(() => {
   sliderElement.src = imges[i++ % imges.length];
 }, 2000);
