@@ -71,9 +71,5 @@ window.logoutFunc =()=>{
   localStorage.removeItem("user");
   window.location.href="/src/Auth/Login/login.html";
   // localStorage.setItem("cart",json.stringify([]));
-
 };
-
-
-//  js files ->  moduels -> global functions - > window object 
-
+ 

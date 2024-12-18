@@ -8,6 +8,7 @@ document.body.insertAdjacentHTML("afterbegin", header_component());
 
 // document.body.innerHTML += slider_component();
 let productList = document.getElementById("productList");
+let allproductCopied;
 
 let i = 0;
 let imges = ["assets/ban1.jpg", "assets/ban2.jpg", "assets/ban3.jpg"];
@@ -18,14 +19,19 @@ window.onload = setInterval(() => {
 }, 2000);
 // let showen_productList = ;
 // document.body.innerHTML += productList_component();
+let displayProduct = (products) => {
+  productList.innerHTML = "";
+  products.forEach((product) => {
+    productList.innerHTML += cardComponent(product);
+  });
+};
 
 // setTimeout(() => {}, 4000);
 getAllProducts().then((products) => {
   // console.log(products);
+  allproductCopied = [...products];
 
-  products.forEach((product) => {
-    productList.innerHTML += cardComponent(product);
-  });
+  displayProduct(products);
 });
 
 window.addToCart = (event) => {
@@ -79,4 +85,58 @@ window.goToLoginPage = () => {
 //   return getCartItems
 // }
 
+// element.addEventListener("click",()=>{
+//   let audioProducts=allproductCopied.filter((product)=>{
+//     console.log(audio.innerText);
+//     return product.category==element.innerText.toLowerCase();
+//   });
+//   displayProduct(audioProducts);
+// })
 
+let getAllPCategories = async () => {
+  try {
+    let request = await fetch("https://fakestoreapi.in/api/products/category");
+    let cats = await JSON.parse(await request.text()).categories;
+    return cats;
+  } catch (error) {
+    console.log(error);
+  }
+};
+function displayCat(element) {
+  return `<h3 id="${element}" onclick='filterproducts(this)' class="category-card">${element}</h3>`;
+}
+var catList = document.getElementById("Category-list");
+
+getAllPCategories().then((cats) => {
+  cats.forEach((element) => {
+    catList.innerHTML += displayCat(element);
+    let cat = document.getElementById(element);
+  });
+});
+
+window.filterproducts = (event) => {
+  let productsForCat = allproductCopied.filter((product) => {
+    // console.log(audio.innerText);
+    return product.category == event.innerText.toLowerCase();
+  });
+  if (productsForCat.length < 1) {
+    displayProduct(allproductCopied);
+  } else {
+    displayProduct(productsForCat);
+  }
+};
+// displayProduct(pridada)
+// dad
+/*
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4, 6]
+*/
+// https://fakestoreapi.in/api/products/category
+
+
+//  0-0
+
+// https://fakestoreapi.com/
+// https://fakestoreapi.com/products
+// https://fakestoreapi.com/products/categories

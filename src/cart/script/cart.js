@@ -46,3 +46,7 @@ window.RemoveItemAmount = (ProductId) => {
   location.reload();
 };
 
+window.CartCheckOut = ()=>{
+  localStorage.removeItem("cart");
+  location.href = "/src/shippedOrder/shippedoder.html";
+}

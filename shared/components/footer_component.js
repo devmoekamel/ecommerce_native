@@ -32,3 +32,4 @@ export let footer_component = () => {
       </div>
     </footer>`;
 };
+
