@@ -13,9 +13,9 @@ export let cart_item = (product, index) => {
         <h2>${product.price}$</h2>
       </div>
       <div class="item-amout">
-        <a href="#"><i class="fa-solid fa-minus"></i></a>
+        <a href="#" onclick="RemoveItemAmount(${index})"><i class="fa-solid fa-minus"></i></a>
         <h2>${product.count}</h2>
-        <a href="#"><i class="fa-solid fa-plus"></i></a>
+        <a href="#" onclick="addItemAmount(${index})"><i class="fa-solid fa-plus"></i></a>
       </div>
       <div class="item-total-price">
         <h2>${Number(product.price) * Number(product.count)}$</h2>
