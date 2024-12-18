@@ -26,6 +26,9 @@ window.deleteItem = (ProductId) => {
   location.reload();
 };
 
+
+
+
 window.addItemAmount = (ProductId) => {
   let cartItems = getCartItems();
   cartItems[ProductId].count++;
