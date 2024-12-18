@@ -27,3 +27,7 @@ export let totalPriceCalc = () => {
   });
   return totalPrice;
 };
+
+
+
+

@@ -1,5 +1,8 @@
 import { getCartItems, getUser } from "../functions.js";
 
+// function Logout(){
+// }
+
 export let header_component = () => {
   console.log("header_component called");
   let CartLength = getCartItems().length;
@@ -53,9 +56,24 @@ export let header_component = () => {
         <h3>${user ? user.username : ""}</h3>
        ${
          user
-           ? "<button class='logout'  >Logout</button>"
+           ? "<button class='logout' id='logout' onclick='logoutFunc()' >Logout</button>"
            : "<button class='login' onclick='goToLoginPage()'>LogIn</button>"
        } 
       </div>
     </header>`;
 };
+
+// window  - > shared.js  - > all pages -> link 
+
+window.logoutFunc =()=>{
+  console.log("ddada");
+  localStorage.removeItem("cart");
+  localStorage.removeItem("user");
+  window.location.href="/src/Auth/Login/login.html";
+  // localStorage.setItem("cart",json.stringify([]));
+
+};
+
+
+//  js files ->  moduels -> global functions - > window object 
+

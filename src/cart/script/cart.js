@@ -28,6 +28,9 @@ window.deleteItem = (ProductId) => {
 
 
 
+
+
+
 // document.body.innerHTML += "";
 // console.log(getCartItems());
 // let CartItems = getCartItems();

@@ -5,6 +5,7 @@ import { header_component } from "/shared/components/header_component.js";
 import { allProducts, getAllProducts } from "./productApi.js";
 
 document.body.insertAdjacentHTML("afterbegin", header_component());
+
 // document.body.innerHTML += slider_component();
 let productList = document.getElementById("productList");
 
@@ -77,3 +78,5 @@ window.goToLoginPage = () => {
 // let CartLength = ()=>{
 //   return getCartItems
 // }
+
+
