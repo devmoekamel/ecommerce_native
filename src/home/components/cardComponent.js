@@ -5,7 +5,6 @@ export let cardComponent = (product) => {
             id="img"
             src=${product.image}
             alt=""
-            width="400"
           />
         </div>
         <div class="card-content">

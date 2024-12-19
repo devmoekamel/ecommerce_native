@@ -95,8 +95,9 @@ window.goToLoginPage = () => {
 
 let getAllPCategories = async () => {
   try {
-    let request = await fetch("https://fakestoreapi.in/api/products/category");
-    let cats = await JSON.parse(await request.text()).categories;
+    let request = await fetch("https://fakestoreapi.com/products/categories");
+    // let cats = await JSON.parse(await request.text()).categories;
+    let cats = await JSON.parse(await request.text());
     return cats;
   } catch (error) {
     console.log(error);
@@ -133,7 +134,6 @@ const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // Output: [2, 4, 6]
 */
 // https://fakestoreapi.in/api/products/category
-
 
 //  0-0
 

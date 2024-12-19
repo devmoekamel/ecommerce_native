@@ -1,11 +1,11 @@
-
-let base_url = "https://fakestoreapi.in/api/";
+// let base_url = "https://fakestoreapi.in/api/";
 let productId = location.href.split("=")[1];
 
 let getProductById = async () => {
   try {
-    let request = await fetch(base_url + "products/" + productId);
-    let product = await JSON.parse(await request.text()).product;
+    let request = await fetch("https://fakestoreapi.com/products/" + productId);
+    // let product = await JSON.parse(await request.text()).product;
+    let product = await JSON.parse(await request.text());
     return product;
   } catch (error) {
     console.log("jkj");
@@ -33,9 +33,11 @@ let productDetial = (product) => {
     `;
 };
 
-   getProductById().then((product)=>{
+getProductById()
+  .then((product) => {
     console.log(product);
-    document.body.innerHTML+=  productDetial(product);
-   }).catch((error)=>{
+    document.body.innerHTML += productDetial(product);
+  })
+  .catch((error) => {
     console.log("f");
-   })
+  });
