@@ -1,24 +1,26 @@
-#main-container {
+/* .main-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10em; /* Add spacing between the image and text */
+    gap: 10em; 
     margin: 20px;
 }
-
+w
 #image-container {
-    flex: 1; /* Makes the image container flexible */
-    text-align: center; /* Centers the image inside the container */
+    flex: 1; 
+    text-align: center; 
 }
 
 #image-container img {
-    max-width: 500px; /* Ensures the image fits within the container */
-    height: auto; /* Maintains the aspect ratio */
+    max-width: 500px;
+    height: auto; 
 }
 
 #text-contianer {
-    flex: 1; /* Makes the text container flexible */
+    flex: 1; 
 }
+
+
 
 #btn {
     padding: 10px 20px;
@@ -40,9 +42,12 @@
 
 #text-contianer h2 span{
     color: #524bcc;
-  }
+  } */
 
-
+.loadingSection{
+    display: flex;
+    justify-content: center;
+}
 
 /* 
 .product-image {
@@ -50,3 +55,62 @@
     height: 200px;
     object-fit: contain;
 } */
+
+.product-details-section{
+    display: grid ;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center ;
+    /* column-gap: 20px; */
+    justify-content: center;
+    margin: 2rem 6rem;
+
+}
+
+.image-container{
+text-align: center;
+}
+.image-container img {
+    width: 400px;
+    height: 350px;
+    object-fit: contain; 
+    padding: 20px;
+    border-radius:2rem;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.114);  
+}
+.detials-contianer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;  
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    row-gap: 1rem;
+    
+}
+.add-to-cart-btn{
+    padding: 10px 20px;
+    background-color:var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    /* align-self: flex-start; */
+}
+
+
+.detials-contianer h2 {
+    color: var(--color-gray);
+}
+
+
+.detials-contianer span {
+    color: var(--primary-color);
+}

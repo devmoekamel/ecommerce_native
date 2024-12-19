@@ -47,7 +47,7 @@ export let header_component = () => {
           ? `<div class="cart-section">
         <a href="/src/cart/cart.html">
           <i class="fa-solid fa-cart-shopping"></i>
-          <span>(${CartLength ?? 0})</span>
+          <span>Cart</span>
         </a>
       </div>`
           : ""

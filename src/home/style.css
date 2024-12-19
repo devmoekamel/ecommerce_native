@@ -147,7 +147,8 @@ img{
 .product-list{
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr)) ;
-    margin: 20px;
+    margin: 40px 0px;
+    
 }
 
 .card {
@@ -159,6 +160,12 @@ img{
     margin: 20px;
     padding: 20px;
     border-radius: 20px;
+transition: 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
 }
 
 .card-image img {

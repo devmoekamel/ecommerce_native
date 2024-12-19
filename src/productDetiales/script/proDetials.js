@@ -1,6 +1,14 @@
 // let base_url = "https://fakestoreapi.in/api/";
+
+import { header_component } from "../../../shared/components/header_component.js";
+
+// import { header_component } from "/shared/components/header_component.js";
 let productId = location.href.split("=")[1];
+let productDetails_element = document.getElementById("product-section");
 let product_detials;
+
+document.body.insertAdjacentHTML("afterbegin", header_component());
+
 let getProductById = async () => {
   try {
     let request = await fetch("https://fakestoreapi.com/products/" + productId);
@@ -15,20 +23,21 @@ let getProductById = async () => {
 
 let productDetial = (product) => {
   return `
-    <div id="main-container">
-        <div id="image-container">
-  <img id="img" src="${product.image}" alt="">
+    <div class="product-details-section" id="product-details">
+      <!-- <img id="loading-img" src="/assets//loading.svg" alt="" srcset="" /> -->
+        <div class="image-container">
+          <img id="img" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
         </div>
-        <div id="text-contianer">
-            <div>
-                <h2>Product Name : <span> ${product.title} </span> </h2>
-                <h2>Price : <span>${product.price}</span></h2>
-                <h2>Category : <span>${product.category}</span></h2>
-                <h2>Brand : <span>${product.brand}</span></h2>
-            </div>
-            <button id="btn" onclick='addToCart(${product.id})'>
-                Add to Cart
-            </button>
+        <div class="detials-contianer">
+          <div class="text-container">
+            <h2>Product Name : <span> ${product.title} </span></h2>
+            <h2>Price : <span>${product.price}</span></h2>
+            <h2>Category : <span>${product.category}</span></h2>
+        
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+            Add to Cart
+          </button>
         </div>
     </div>
     `;
@@ -37,16 +46,15 @@ let productDetial = (product) => {
 getProductById()
   .then((product) => {
     console.log(product);
-    document.body.innerHTML += productDetial(product);
-  })
-  .catch((error) => {
-    console.log("f");
+    productDetails_element.classList.value = "";
+    console.log(product);
+    productDetails_element.innerHTML = productDetial(product);
   });
-
-function getCart (){
-
-return  localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[];
-} 
+function getCart() {
+  return localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [];
+}
 
 window.addToCart = (event) => {
   // localStorage.setItem("cart",JSON.stringify());

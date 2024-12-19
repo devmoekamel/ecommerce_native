@@ -20,6 +20,10 @@ window.onload = setInterval(() => {
 // let showen_productList = ;
 // document.body.innerHTML += productList_component();
 let displayProduct = (products) => {
+  console.log(productList.classList.value);
+  productList.classList.value = "product-list";
+  console.log(productList.classList.value);
+
   productList.innerHTML = "";
   products.forEach((product) => {
     productList.innerHTML += cardComponent(product);
@@ -52,11 +56,11 @@ window.addToCart = (event) => {
     product.count = 1;
     cartItems.push(product);
     localStorage.setItem("cart", JSON.stringify(cartItems));
-    location.reload();
+    // location.reload();
   } else {
     cartItems[productId].count++;
     localStorage.setItem("cart", JSON.stringify(cartItems));
-    location.reload();
+    // location.reload();
   }
 
   // console.log(allProducts[event.id - 1]);
