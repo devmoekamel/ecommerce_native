@@ -286,8 +286,12 @@ img{
 } */
 
 
-.loading-section{
+/* .loading-section{
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.loading-section{
+    text-align: center;
 }
