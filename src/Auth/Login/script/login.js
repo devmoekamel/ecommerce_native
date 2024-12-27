@@ -15,7 +15,7 @@ function CheckUser() {
   let users = JSON.parse(localStorage.getItem("users"));
   let flag = false;
   users.forEach((user) => {
-    if (user.username == userData.username) {
+    if (user.username == userData.username && user.password == userData.password) {
       flag = true;
     }
   });

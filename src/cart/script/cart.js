@@ -26,9 +26,6 @@ window.deleteItem = (ProductId) => {
   location.reload();
 };
 
-
-
-
 window.addItemAmount = (ProductId) => {
   let cartItems = getCartItems();
   cartItems[ProductId].count++;
@@ -46,7 +43,7 @@ window.RemoveItemAmount = (ProductId) => {
   location.reload();
 };
 
-window.CartCheckOut = ()=>{
+window.CartCheckOut = () => {
   localStorage.removeItem("cart");
   location.href = "/src/shippedOrder/shippedoder.html";
-}
+};
