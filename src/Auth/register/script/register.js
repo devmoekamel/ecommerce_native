@@ -57,7 +57,7 @@ password.addEventListener("input", (event) => {
 
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  if (user.email != null && user.password != null && user.username != null) {
+  if (user.email != "" && user.password != "" && user.username != "") {
     let users = JSON.parse(localStorage.getItem("users"));
     users.push(user);
     registerForm.reset();
